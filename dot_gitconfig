@@ -1,0 +1,9 @@
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[user]
+	email = jplr8922@gmail.com
+	name = jplej
+[credential]
+	helper = store

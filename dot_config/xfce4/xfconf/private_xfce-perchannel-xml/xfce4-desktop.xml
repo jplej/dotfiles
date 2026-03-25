@@ -1,0 +1,32 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<channel name="xfce4-desktop" version="1.0">
+  <property name="desktop-icons" type="empty">
+    <property name="style" type="empty"/>
+    <property name="file-icons" type="empty">
+      <property name="show-home" type="empty"/>
+      <property name="show-filesystem" type="bool" value="true"/>
+      <property name="show-removable" type="bool" value="true"/>
+      <property name="show-trash" type="empty"/>
+    </property>
+    <property name="icon-size" type="uint" value="48"/>
+    <property name="tooltip-size" type="empty"/>
+  </property>
+  <property name="desktop-menu" type="empty">
+    <property name="show" type="empty"/>
+  </property>
+  <property name="last-settings-migration-version" type="uint" value="1"/>
+  <property name="last" type="empty">
+    <property name="window-width" type="int" value="607"/>
+    <property name="window-height" type="int" value="607"/>
+  </property>
+  <property name="backdrop" type="empty">
+    <property name="screen0" type="empty">
+      <property name="monitoreDP-1" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="last-image" type="string" value="/home/jplr/pCloudDrive/_reference/wallpapers/G0qFcEpXAAA2MWC.jpg"/>
+        </property>
+      </property>
+    </property>
+  </property>
+</channel>

@@ -1,0 +1,32 @@
+theme = "solarized_dark"
+
+[editor]
+line-number = "relative"
+cursorline = true
+auto-pairs = true
+bufferline = "multiple"
+true-color = true
+rulers = [88]
+clipboard-provider = "x-sel"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "read-only-indicator"]
+right = ["diagnostics", "selections", "position", "file-encoding"]
+
+[editor.indent-guides]
+render = true
+
+[editor.soft-wrap]
+enable = true
