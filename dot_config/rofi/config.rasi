@@ -1,3 +1,12 @@
+configuration {
+    show-icons: true;
+    modes: "drun,run,window";
+    matching: "fuzzy";
+    case-sensitive: false;
+    terminal: "kitty";
+    drun-display-format: "{name}";
+}
+
 //@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
-//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
-@theme "/usr/share/rofi/themes/solarized_alternate.rasi"
+//@theme "/usr/share/rofi/themes/solarized_alternate.rasi"
+@theme "~/.config/rofi/nord.rasi"
