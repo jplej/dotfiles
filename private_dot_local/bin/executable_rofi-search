@@ -1,0 +1,19 @@
+#!/bin/bash
+# Rofi + Recoll desktop search
+# Usage: rofi-search
+
+query=$(rofi -dmenu -p "Search" -theme-str 'entry { placeholder: "files, content, metadata..."; }')
+[ -z "$query" ] && exit 0
+
+# Search recoll, format as "path  —  title/snippet"
+results=$(recollq -b "$query" 2>/dev/null | head -30)
+[ -z "$results" ] && notify-send "Search" "No results for: $query" && exit 0
+
+selected=$(echo "$results" | rofi -dmenu -p "Results" -i)
+[ -z "$selected" ] && exit 0
+
+# Extract file path (recoll -b outputs file:// URIs)
+filepath=$(echo "$selected" | sed 's|^file://||')
+
+# Open with xdg-open
+xdg-open "$filepath" 2>/dev/null &

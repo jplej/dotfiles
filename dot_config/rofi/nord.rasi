@@ -79,6 +79,10 @@ entry, prompt, case-indicator {
     text-color:inherit;
 }
 
+entry {
+    cursor: text;
+}
+
 prompt {
     margin: 0px 1em 0em 0em ;
 }
@@ -90,6 +94,8 @@ listview {
     border: 0px 1px 1px 1px;
     background-color: rgba(46,52,64,0.9);
     dynamic: false;
+    lines: 8;
+    fixed-height: true;
 }
 
 element {

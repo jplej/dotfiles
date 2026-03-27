@@ -1,0 +1,10 @@
+[Unit]
+Description=Greenclip clipboard manager daemon
+After=graphical-session.target
+
+[Service]
+ExecStart=%h/.local/bin/greenclip daemon
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

@@ -8,6 +8,8 @@ bufferline = "multiple"
 true-color = true
 rulers = [88]
 clipboard-provider = "x-sel"
+color-modes = true
+auto-save = { focus-lost = true, after-delay.enable = true, after-delay.timeout = 3000 }
 
 [editor.cursor-shape]
 insert = "bar"

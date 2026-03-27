@@ -1,8 +1,15 @@
 [[language]]
 name = "python"
-language-servers = ["ruff"]
+language-servers = ["pyright", "ruff"]
 auto-format = true
 formatter = { command = "ruff", args = ["format", "--stdin-filename", "file.py", "-"] }
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "basic"
 
 [language-server.ruff]
 command = "ruff"
@@ -10,6 +17,7 @@ args = ["server"]
 
 [[language]]
 name = "markdown"
+language-servers = ["marksman"]
 auto-format = false
 text-width = 80
 rulers = [80]

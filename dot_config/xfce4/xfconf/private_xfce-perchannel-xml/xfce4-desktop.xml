@@ -24,7 +24,10 @@
     <property name="screen0" type="empty">
       <property name="monitoreDP-1" type="empty">
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/jplr/pCloudDrive/_reference/wallpapers/G0qFcEpXAAA2MWC.jpg"/>
+          <property name="last-image" type="string" value="/home/jplr/pCloudDrive/_reference/wallpapers/nature/1758454789745831.jpg"/>
+          <property name="backdrop-cycle-enable" type="bool" value="false"/>
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
         </property>
       </property>
     </property>

@@ -1,10 +1,17 @@
 configuration {
     show-icons: true;
-    modes: "drun,run,window";
+    modes: "drun";
     matching: "fuzzy";
+    sorting-method: "fzf";
+    sort: true;
     case-sensitive: false;
     terminal: "kitty";
-    drun-display-format: "{name}";
+    drun-display-format: "{name} - {generic}";
+    drun-match-fields: "name,exec,categories";
+    scroll-method: 1;
+    steal-focus: true;
+    click-to-exit: true;
+    window-format: "{w} {c} {t}";
 }
 
 //@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
