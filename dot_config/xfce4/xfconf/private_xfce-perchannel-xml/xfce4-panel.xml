@@ -66,6 +66,7 @@
       <property name="symbolic-icons" type="bool" value="true"/>
       <property name="icon-size" type="int" value="0"/>
       <property name="known-items" type="array">
+        <value type="string" value="steam"/>
         <value type="string" value="vlc"/>
         <value type="string" value="un-reboot"/>
         <value type="string" value="unattended-upgrade"/>
@@ -102,7 +103,7 @@
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="enable-mpris" type="bool" value="true"/>
       <property name="enable-wnck" type="bool" value="true"/>
-      <property name="known-players" type="string" value="Brave;firefox.instance_1_184;firefox_firefox;org.gnome.Rhythmbox3;parole;vlc"/>
+      <property name="known-players" type="string" value="Brave;firefox.instance_1_184;firefox_firefox;org.gnome.Rhythmbox3;parole;telegram-desktop_telegram-desktop;vlc"/>
       <property name="mixer-command" type="string" value="pavucontrol"/>
       <property name="persistent-players" type="string" value="parole;org.gnome.Rhythmbox3"/>
       <property name="show-notifications" type="bool" value="true"/>

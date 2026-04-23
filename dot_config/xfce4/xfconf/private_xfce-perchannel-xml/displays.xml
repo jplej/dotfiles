@@ -22,12 +22,12 @@
     <property name="DP-2-3" type="string" value="Dell Inc. 27&quot;">
       <property name="Active" type="bool" value="true"/>
       <property name="EDID" type="string" value="9d07041157c176421c6e961c91bbcb5b0895c6a9"/>
-      <property name="Resolution" type="string" value="2048x1280"/>
-      <property name="RefreshRate" type="double" value="59.993422514167733"/>
+      <property name="Resolution" type="string" value="3840x2160"/>
+      <property name="RefreshRate" type="double" value="30"/>
       <property name="Rotation" type="int" value="0"/>
       <property name="Reflection" type="string" value="0"/>
       <property name="Primary" type="bool" value="false"/>
-      <property name="Scale" type="double" value="1"/>
+      <property name="Scale" type="double" value="0.79998779296875"/>
       <property name="Position" type="empty">
         <property name="X" type="int" value="1920"/>
         <property name="Y" type="int" value="0"/>

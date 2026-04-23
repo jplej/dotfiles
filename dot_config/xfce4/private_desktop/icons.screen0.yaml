@@ -4,16 +4,6 @@
 configs:
 - level: 1
   monitors:
-  - id: "cdaa95eff76ee233f27e4870d88096fa0ae6ba11"
-    display_name: "Dell Inc. DELL S2722QC JX79MD3 (DP-2-3)"
-    geometry:
-      x: 1920
-      y: 0
-      width: 3840
-      height: 2160
-  icons: {}
-- level: 1
-  monitors:
   - id: "a3a797040b416a30379323a1fd1be8908a840f53"
     display_name: "Dell Inc. DELL U2412M YMYH149Q3KWS (DP-2-1)"
     geometry:
@@ -21,6 +11,16 @@ configs:
       y: 0
       width: 1920
       height: 1200
+  icons: {}
+- level: 1
+  monitors:
+  - id: "cdaa95eff76ee233f27e4870d88096fa0ae6ba11"
+    display_name: "Dell Inc. DELL S2722QC JX79MD3 (DP-2-3)"
+    geometry:
+      x: 1920
+      y: 0
+      width: 3840
+      height: 2160
   icons: {}
 - level: 0
   monitors:
@@ -35,6 +35,10 @@ configs:
     "trash:///":
       row: 1
       col: 0
+    "smb://192.168.4.34/shared/":
+      row: 5
+      col: 0
+      last_seen: 1772414059518955
     "/home/jplr/Desktop/bb506827-baea-4338-8d07-5c9ecdedd3b6_2148x2398.webp":
       row: 1
       col: 10
@@ -44,27 +48,27 @@ configs:
     "/home/jplr/Desktop/steam.desktop":
       row: 2
       col: 0
+    "smb://ubuntu-nas.local/shared/":
+      row: 5
+      col: 0
+      last_seen: 1776473434103731
     "238 MB Volume":
       row: 5
       col: 0
       last_seen: 1773051472022763
-    "/home/jplr/Desktop/8a12ddd3-42f3-4377-9031-f1cf4ab2a7dd-diagnostics.json":
-      row: 5
-      col: 0
-    "/home/jplr":
-      row: 0
-      col: 0
     "/":
       row: 3
+      col: 0
+    "/home/jplr/Desktop/8a12ddd3-42f3-4377-9031-f1cf4ab2a7dd.heapsnapshot":
+      row: 6
       col: 0
     "/home/jplr/pCloudDrive":
       row: 4
       col: 0
       last_seen: 1770691735524192
-    "smb://192.168.4.34/shared/":
-      row: 5
+    "/home/jplr":
+      row: 0
       col: 0
-      last_seen: 1772414059518955
-    "/home/jplr/Desktop/8a12ddd3-42f3-4377-9031-f1cf4ab2a7dd.heapsnapshot":
-      row: 6
+    "/home/jplr/Desktop/8a12ddd3-42f3-4377-9031-f1cf4ab2a7dd-diagnostics.json":
+      row: 5
       col: 0

@@ -115,14 +115,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-alias docker=podman
 alias bat='batcat'
 export PATH="$HOME/.local/bin:$PATH"
 eval "$(starship init bash)"
 export PATH="$PATH:$HOME/go/bin"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# Auto-start tmux
-if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
-  exec tmux new-session -A -s main
-fi

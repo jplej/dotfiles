@@ -1,0 +1,16 @@
+# Theme
+theme = Nord
+
+# Font (same as kitty config)
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 12
+
+# Window
+window-padding-x = 10
+window-padding-y = 10
+
+# Cursor
+cursor-style = block
+
+# Scrollback
+scrollback-limit = 10000

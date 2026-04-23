@@ -62,7 +62,7 @@
       <property name="&lt;Super&gt;m" type="string" value="flatpak run eu.betterbird.Betterbird&#xA;"/>
       <property name="&lt;Super&gt;b" type="string" value="flatpak run com.brave.Browser"/>
       <property name="&lt;Super&gt;r" type="string" value="rofi -show drun"/>
-      <property name="&lt;Super&gt;t" type="string" value="kitty"/>
+      <property name="&lt;Super&gt;t" type="string" value="ghostty"/>
       <property name="&lt;Alt&gt;Tab" type="string" value="rofi -show window"/>
       <property name="&lt;Super&gt;f" type="string" value="/home/jplr/.local/bin/rofi-search"/>
       <property name="&lt;Super&gt;c" type="string" value="rofi -modi clipboard:greenclip\ print -show clipboard"/>

@@ -1,13 +1,13 @@
 {
-  "version": "4.2.0",
-  "buildDate": "2026-02-21T09:24:13.050Z",
+  "version": "4.3.1",
+  "buildDate": "2026-03-30T07:35:25.095Z",
   "app": {
     "openFiles": [],
     "openWorkspaces": [
       "/home/jplr/docs/notes"
     ]
   },
-  "openDirectory": "/home/jplr/docs/notes/planning",
+  "openDirectory": "/home/jplr/docs/notes/publications/drafts",
   "dialogPaths": {
     "askFileDialog": "",
     "askDirDialog": "/home/jplr/docs/notes",
@@ -45,6 +45,10 @@
   "fileManagerShowFiles": true,
   "fileManagerShowWorkspaces": true,
   "fileNameDisplay": "filename",
+  "fileManager": {
+    "twoStepCollapseWorkspaces": false,
+    "sortWorkspacesManually": false
+  },
   "newFileNamePattern": "%id.md",
   "newFileDontPrompt": false,
   "export": {
@@ -82,6 +86,7 @@
     "enableTableHelper": true,
     "indentUnit": 4,
     "indentWithTabs": false,
+    "alwaysIndentLineOnTab": false,
     "fontSize": 18,
     "countChars": false,
     "inputMode": "default",
