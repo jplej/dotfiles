@@ -7,10 +7,10 @@
       "/home/jplr/docs/notes"
     ]
   },
-  "openDirectory": "/home/jplr/docs/notes/publications/drafts",
+  "openDirectory": "/home/jplr/docs/repos/raph-dashboard",
   "dialogPaths": {
     "askFileDialog": "",
-    "askDirDialog": "/home/jplr/docs/notes",
+    "askDirDialog": "/home/jplr/Downloads",
     "askLangFileDialog": ""
   },
   "window": {
@@ -52,7 +52,7 @@
   "newFileNamePattern": "%id.md",
   "newFileDontPrompt": false,
   "export": {
-    "dir": "temp",
+    "dir": "ask",
     "stripTags": false,
     "autoOpenExportedFiles": true,
     "enforceMarkSupport": true,
@@ -62,8 +62,13 @@
     "useBundledPandoc": true,
     "exportQmdWithQuarto": false,
     "customCommands": [],
-    "selectedProfiles": [],
-    "lastUsedProfile": "HTML.yaml"
+    "selectedProfiles": [
+      {
+        "filePath": "/home/jplr/docs/notes/publications/drafts/20260512-emh-paradigm-v2.md",
+        "profile": "Simple PDF.yaml"
+      }
+    ],
+    "lastUsedProfile": "Simple PDF.yaml"
   },
   "zkn": {
     "idRE": "(\\d{14})",
@@ -108,7 +113,13 @@
           "pt": "pt-PT",
           "ca": "ca-ES"
         },
-        "ignoredRules": [],
+        "ignoredRules": [
+          {
+            "description": "Commas after conjunctive/linking adverbs in front of a new sentence.",
+            "id": "SENT_START_CONJUNCTIVE_LINKING_ADVERB_COMMA",
+            "category": "Punctuation"
+          }
+        ],
         "provider": "official",
         "customServer": "",
         "username": "",

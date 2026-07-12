@@ -121,3 +121,8 @@ eval "$(starship init bash)"
 export PATH="$PATH:$HOME/go/bin"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+export DOCKER_HOST=unix:///var/run/docker.sock
+
+# add Pulumi to the PATH
+export PATH=$PATH:/home/jplr/.pulumi/bin
+export PATH=$PATH:/home/jplr/.pulumi/bin

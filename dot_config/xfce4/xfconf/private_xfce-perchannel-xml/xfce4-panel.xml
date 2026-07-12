@@ -34,6 +34,7 @@
   <property name="plugins" type="empty">
     <property name="plugin-1" type="string" value="whiskermenu">
       <property name="recent" type="array">
+        <value type="string" value="deluge.desktop"/>
         <value type="string" value="xfce-display-settings.desktop"/>
         <value type="string" value="xfce4-power-manager-settings.desktop"/>
         <value type="string" value="xfce4-screenshooter.desktop"/>
@@ -43,7 +44,6 @@
         <value type="string" value="xfce-ui-settings.desktop"/>
         <value type="string" value="com.brave.Browser.desktop"/>
         <value type="string" value="kitty.desktop"/>
-        <value type="string" value="xfce4-terminal.desktop"/>
       </property>
     </property>
     <property name="plugin-2" type="string" value="separator">
