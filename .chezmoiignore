@@ -1,0 +1,4 @@
+{{ if eq .chezmoi.hostname "tkpd-l390-yoga" }}
+# server: keep local power/lid settings, do not manage this file here
+.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml
+{{ end }}
