@@ -1,0 +1,35 @@
+# i3 config — split into conf.d/, loaded in filename order after the vars below.
+# Palette: Nord (declared by meaning: FOCUS/WARN/ERROR)   Font: Lato (chrome), JetBrainsMono (content)
+#
+# Variables live HERE, before the include, so every conf.d/ file inherits them
+# regardless of glob order (i3 does not guarantee an included file is parsed
+# after its siblings — only after this point in the main config).
+set $mod  Mod4
+set $alt  Mod1
+set $term ghostty
+
+# Nord, named by meaning. Frost = where you are. Aurora = what happened.
+set $bg     #2E3440
+set $bg2    #3B4252
+set $border #4C566A
+set $fg     #ECEFF4
+set $focus  #88C0D0
+set $error  #BF616A
+
+# Layout of the rest of this config:
+#   conf.d/00-base       fonts, gaps, focus rules, client colors
+#   conf.d/10-rules      float rules + workspace assignments
+#   conf.d/20-autostart  exec / exec_always daemons and reserved apps
+#   conf.d/30-apps       GENERATED  — APPS mode      ($mod+a, green)
+#   conf.d/31-system     GENERATED  — SYSTEM mode    ($mod+s, blue)
+#   conf.d/32-window     hand-written — WINDOW mode  ($mod+w, yellow)
+#   conf.d/33-session    GENERATED  — SESSION mode   ($mod+e, red)
+#   conf.d/40-keys       flat keybindings, workspaces, window management
+#   conf.d/50-bar        polybar launch
+#
+# The GENERATED mode files come from modes/*.mode (compact icon/key/label/command tables).
+# i3 has no line-continuation and won't expand $vars inside a set value, so the long polybar
+# %{...} crib strings can't be built in i3 syntax — bin/gen-modes.py expands the tables instead.
+# To change an app menu: edit modes/<x>.mode, run  bin/gen-modes.py , then $mod+Shift+c to reload.
+
+include ~/.config/i3/conf.d/*.conf

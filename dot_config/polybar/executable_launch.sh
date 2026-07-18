@@ -1,13 +1,20 @@
 #!/usr/bin/env bash
+# Kill BOTH polybar and the fullscreen-hide watcher. Killing only polybar
+# leaks a watcher on every relaunch, and each one polls xprop twice a second.
 
-# kill running instances
 killall -q polybar
-while pgrep -u $UID -x polybar >/dev/null; do sleep 0.2; done
+pkill -f "$HOME/.config/polybar/fullscreen-hide.sh"
+while pgrep -u "$UID" -x polybar >/dev/null; do sleep 0.2; done
 
-# launch bars
-polybar status 2>&1 | tee -a /tmp/polybar-status.log &
-polybar tray 2>&1 | tee -a /tmp/polybar-tray.log &
+# The X11 XEmbed tray can only live on one bar, so host it on the primary output only.
+primary=$(polybar --list-monitors | awk -F: '/\(primary\)/{print $1}')
 
-~/.config/polybar/fullscreen-hide.sh &
+# One bar per connected output. pin-workspaces makes each bar show only its
+# own screen's workspaces, so every monitor advertises what it's displaying.
+for m in $(polybar --list-monitors | cut -d: -f1); do
+  if [ "$m" = "$primary" ]; then bar=deskbar-primary; else bar=deskbar; fi
+  MONITOR="$m" polybar "$bar" 2>&1 | tee -a "/tmp/polybar-deskbar-$m.log" &
+done
+"$HOME/.config/polybar/fullscreen-hide.sh" &
 
 echo "polybar launched"

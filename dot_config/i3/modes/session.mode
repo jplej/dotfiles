@@ -1,0 +1,12 @@
+# name: SESSION
+# var: session
+# color: #BF616A
+# trigger: $mod+e
+# trigger: Ctrl+$alt+Delete
+# out: 33-session.conf
+# icon	key	label	command
+󰌾	l	lock	~/.config/i3/lock.sh
+󰗼	e	exit	i3-msg exit
+󰒲	s	suspend	systemctl suspend
+󰜉	r	reboot	systemctl reboot
+󰐥	p	poweroff	systemctl poweroff

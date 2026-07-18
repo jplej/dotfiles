@@ -1,36 +1,36 @@
 #!/usr/bin/env bash
 # Hide polybar when the active window is fullscreen.
+# Event-driven: i3 pushes window/workspace events, so this only looks when something moved.
+# It used to poll xprop twice a second — two -root calls plus one -id per window, forever.
 
 set -u
 
+# The focused workspace is the one holding the focused container; an empty workspace is
+# focused itself. Hide only when something on THAT workspace is fullscreen.
 is_fullscreen() {
-    local ids id cur wd
-    cur=$(xprop -root _NET_CURRENT_DESKTOP 2>/dev/null | awk '{print $NF}')
-    ids=$(xprop -root _NET_CLIENT_LIST 2>/dev/null | grep -oE '0x[0-9a-f]+')
-    for id in $ids; do
-        xprop -id "$id" _NET_WM_STATE 2>/dev/null | grep -q _NET_WM_STATE_FULLSCREEN || continue
-        wd=$(xprop -id "$id" _NET_WM_DESKTOP 2>/dev/null | awk '{print $NF}')
-        [[ "$wd" == "$cur" || "$wd" == "0xffffffff" ]] || continue
-        return 0
-    done
-    return 1
+    i3-msg -t get_tree 2>/dev/null | jq -e '
+        [ .. | objects | select(.type? == "workspace") ]
+        | map(select([.. | objects | select(.focused? == true)] | length > 0))
+        | map(select([.. | objects | select((.fullscreen_mode? // 0) > 0 and .window? != null)] | length > 0))
+        | length > 0
+    ' >/dev/null 2>&1
 }
 
-apply() {
-    local action=$1
-    polybar-msg cmd "$action" >/dev/null 2>&1
-}
-
-state=shown
+state=
 check() {
-    if is_fullscreen; then
-        if [[ $state != hidden ]]; then apply hide; state=hidden; fi
-    else
-        if [[ $state != shown ]]; then apply show; state=shown; fi
-    fi
+    local want
+    if is_fullscreen; then want=hidden; else want=shown; fi
+    [[ "$want" == "$state" ]] && return
+    state=$want
+    [[ "$want" == hidden ]] && polybar-msg cmd hide >/dev/null 2>&1 \
+                            || polybar-msg cmd show >/dev/null 2>&1
 }
 
-while true; do
+check
+# launch.sh pkills this script by name, which does not match the i3-msg child — without this
+# trap the subscriber is orphaned until an event happens to break its pipe.
+trap 'pkill -P $$ 2>/dev/null' EXIT TERM INT
+# -m streams events; each line is one change, and any of them can alter fullscreen state.
+i3-msg -t subscribe -m '["window","workspace"]' 2>/dev/null | while read -r _; do
     check
-    sleep 0.5
 done
