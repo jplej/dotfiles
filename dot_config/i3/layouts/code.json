@@ -1,0 +1,15 @@
+// Two terminals side by side; i3 swallows each into its slot by x11 instance name
+{
+    "layout": "splith",
+    "type": "con",
+    "nodes": [
+        {
+            "type": "con",
+            "swallows": [{"class": "^com\\.mitchellh\\.ghostty$", "instance": "^helix$"}]
+        },
+        {
+            "type": "con",
+            "swallows": [{"class": "^com\\.mitchellh\\.ghostty$", "instance": "^agent$"}]
+        }
+    ]
+}

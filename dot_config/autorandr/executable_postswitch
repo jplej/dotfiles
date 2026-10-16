@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Relaunch polybar after any display change (login, hotplug, profile switch).
+# i3's `reload` does NOT re-run exec_always, and monitor hotplug never touches
+# polybar on its own — so without this, a newly-connected screen comes up with
+# no bar. autorandr runs this on every --change, so bars always re-match the
+# current set of outputs (launch.sh spawns one per connected monitor).
+exec "$HOME/.config/polybar/launch.sh"

@@ -4,9 +4,9 @@
 # trigger: $mod+a
 # out: 30-apps.conf
 # icon	key	label	command
-󰆍	t	term	$term
-󰖟	b	browser	flatpak run com.brave.Browser
-󰉋	e	files	thunar
+󰀻	r	run	rofi -show drun
+󰠮	z	zettlr	zettlr
+󰈙	o	office	libreoffice
 󰇮	m	mail	flatpak run eu.betterbird.Betterbird
 󰭹	g	telegram	flatpak run org.telegram.desktop
 󰢬	p	pass	1password

@@ -4,7 +4,6 @@
 # trigger: $mod+s
 # out: 31-system.conf
 # icon	key	label	command
-󰀻	r	run	rofi -show drun
 󰍉	f	find	~/.local/bin/rofi-search
 󰅎	c	clip	rofi -modi "clipboard:greenclip print" -show clipboard
 󰕾	s	sound	pavucontrol

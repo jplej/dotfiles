@@ -25,3 +25,7 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+# Cursor theme/size for X apps started outside the i3 exec chain (GTK, etc.)
+export XCURSOR_THEME=Adwaita
+export XCURSOR_SIZE=24

@@ -6,7 +6,8 @@
 # out: 33-session.conf
 # icon	key	label	command
 󰌾	l	lock	~/.config/i3/lock.sh
-󰗼	e	exit	i3-msg exit
+󰗼	e	exit	~/.config/i3/bin/logout.sh
+󰑓	i	restart i3	i3-msg restart
 󰒲	s	suspend	systemctl suspend
 󰜉	r	reboot	systemctl reboot
 󰐥	p	poweroff	systemctl poweroff

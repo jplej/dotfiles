@@ -1,0 +1,5 @@
+! Cursor: pin theme + size so the root window (empty i3 desktop) matches apps.
+! Without this, apps use Adwaita/24 (gsettings) but the root window falls back
+! to a different theme at a larger, unpinned size -> big cursor over "nothing".
+Xcursor.theme: Adwaita
+Xcursor.size:  24

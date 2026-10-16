@@ -1,0 +1,126 @@
+// Rofi docked flush to polybar (bottom-left), styled as a continuation of the bar.
+// It speaks polybar's own grammar so it reads as one more module row rising out
+// of the bar, not a separate popup:
+//   · the 2px `line` hairline that tops every polybar module  → window top border
+//   · `face` chips on a `well` ground, `idle` secondary text
+//   · `focus` (Frost) for the selected row — the same Frost i3 paints on the
+//     focused window and polybar on the focused workspace. One colour, one meaning.
+//   · the `focus` prompt is the mode tile you pressed, continued in-menu — as a
+//     proper chip, not a full flat band. It was red until the vocabulary landed:
+//     arming a mode is where you are, not something that failed.
+// Colours are named by meaning. Frost = where you are. Aurora = what happened.
+// Keep these names in sync with i3/config and polybar/{config.ini,colors.sh}.
+* {
+    well:   #2E3440;
+    face:   #3B4252;
+    faceHi: #434C5E;
+    line:   #4C566A;
+    text:   #ECEFF4;
+    idle:   #616E88;
+    focus:  #88C0D0;
+    warn:   #EBCB8B;
+    error:  #BF616A;
+    background-color: transparent;
+    text-color: @text;
+}
+
+configuration {
+    show-icons: true;
+    // Proportional face for chrome; mono belongs in the terminal, where content is
+    font: "Lato Medium 11";
+}
+
+// south west + y-offset -44 lifts it flush onto the 44px bar; the top hairline
+// (polybar's overline, in `line`) makes it read as one more module row.
+window {
+    location: south west;
+    anchor:   south west;
+    x-offset: 0;
+    y-offset: -44px;
+    width:    720px;
+    border:        2px 0px 0px 0px;
+    border-color:  @line;
+    border-radius: 0;
+    padding:  0;
+    background-color: @well;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing: 0;
+    padding: 0;
+}
+
+// The prompt is a Frost chip — literally the polybar mode tile, continued into the
+// menu — sitting on the dark `well` ground you type on.
+inputbar {
+    background-color: @well;
+    text-color: @text;
+    padding: 0;
+    spacing: 0;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    background-color: @focus;
+    text-color: @well;
+    padding: 11px 16px;
+    vertical-align: 0.5;
+}
+
+entry {
+    background-color: @well;
+    text-color: @text;
+    placeholder: "search…";
+    placeholder-color: @idle;
+    padding: 11px 14px;
+    cursor: text;
+}
+
+// A `faceHi` rule separates input from results, echoing polybar's module seams.
+listview {
+    background-color: @well;
+    border:       2px 0px 0px 0px;
+    border-color: @faceHi;
+    lines: 8;
+    fixed-height: false;
+    scrollbar: false;
+    padding: 6px 0px;
+    spacing: 2px;
+}
+
+element {
+    padding: 8px 16px;
+    spacing: 12px;
+    border-radius: 4px;
+    background-color: transparent;
+    text-color: @text;
+}
+
+// Running/active entries (e.g. in window mode) carry Frost as text — live, but not where you are.
+element normal active {
+    text-color: @focus;
+}
+
+// Selected row = Frost as ground — the focused-workspace colour, in-menu. Same meaning, different
+// ground from `active` above, so the two stay distinguishable.
+element selected {
+    background-color: @focus;
+    text-color: @well;
+}
+
+element selected active {
+    text-color: @well;
+}
+
+element-icon {
+    size: 1.25em;
+    padding: 0px 10px 0px 0px;
+    background-color: inherit;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+}

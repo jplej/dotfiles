@@ -1,0 +1,13 @@
+# name: GO
+# var: go
+# color: #A3BE8C
+# trigger: $mod+g
+# out: 34-go.conf
+# icon	key	label	command
+󰅩	1	code¹	i3-msg workspace number 1
+󰅩	2	code²	i3-msg workspace number 2
+󰅩	3	code³	i3-msg workspace number 3
+󰖟	4	web	i3-msg workspace number 4
+󰈙	5	notes	i3-msg workspace number 5
+󰇮	6	mail	i3-msg workspace number 6
+󰭹	7	chat	i3-msg workspace number 7

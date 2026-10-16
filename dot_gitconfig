@@ -2,8 +2,11 @@
 	rebase = false
 [init]
 	defaultBranch = main
-[user]
-	email = jplr8922@gmail.com
-	name = jplej
-[credential]
-	helper = store
+[includeIf "gitdir:~/docs/repos/personal/"]
+	path = ~/.gitconfig-personal
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

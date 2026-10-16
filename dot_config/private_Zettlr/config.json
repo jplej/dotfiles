@@ -1,29 +1,32 @@
 {
-  "version": "4.3.1",
-  "buildDate": "2026-03-30T07:35:25.095Z",
+  "version": "4.6.0",
+  "buildDate": "2026-06-14T10:04:20.731Z",
   "app": {
-    "openFiles": [],
-    "openWorkspaces": [
-      "/home/jplr/docs/notes"
-    ]
+    "openFiles": [
+      "/home/jplr/docs/records/2151-wellington/2026-fondation-dol-roth/be3i/v1/01-questions-expert.md",
+      "/home/jplr/docs/records/2151-wellington/2026-fondation-dol-roth/2019-travaux-roth/20191118_courriels-roth-francoeur.md",
+      "/home/jplr/docs/records/2151-wellington/2026-fondation-dol-roth/be3i/v1/draft-v1/livrable/courriel-accompagnement.md"
+    ],
+    "openWorkspaces": []
   },
-  "openDirectory": "/home/jplr/docs/repos/raph-dashboard",
+  "openDirectory": "/home/jplr/docs/records/2151-wellington/2026-fondation-dol-roth/be3i/v1/draft-v1/livrable",
   "dialogPaths": {
-    "askFileDialog": "",
-    "askDirDialog": "/home/jplr/Downloads",
+    "askFileDialog": "/home/jplr/pCloudDrive/notes",
+    "askDirDialog": "/home/jplr/pCloudDrive/notes",
     "askLangFileDialog": ""
   },
   "window": {
     "nativeAppearance": false,
     "vibrancy": false,
+    "fileManagerVisible": true,
     "sidebarVisible": false,
     "currentSidebarTab": "toc",
     "recentGlobalSearches": []
   },
   "ui": {
     "fileManagerSplitSize": [
-      20,
-      80
+      21,
+      79
     ],
     "editorSidebarSplitSize": [
       80,
@@ -52,7 +55,7 @@
   "newFileNamePattern": "%id.md",
   "newFileDontPrompt": false,
   "export": {
-    "dir": "ask",
+    "dir": "cwd",
     "stripTags": false,
     "autoOpenExportedFiles": true,
     "enforceMarkSupport": true,
@@ -64,11 +67,15 @@
     "customCommands": [],
     "selectedProfiles": [
       {
-        "filePath": "/home/jplr/docs/notes/publications/drafts/20260512-emh-paradigm-v2.md",
-        "profile": "Simple PDF.yaml"
+        "filePath": "/home/jplr/pCloudDrive/notes/nymbus-promotion-revue-rh.md",
+        "profile": "Microsoft Word.yaml"
+      },
+      {
+        "filePath": "/home/jplr/pCloudDrive/notes/nymbus-promotion-revue-rh_v2.md",
+        "profile": "Microsoft Word.yaml"
       }
     ],
-    "lastUsedProfile": "Simple PDF.yaml"
+    "lastUsedProfile": "Microsoft Word.yaml"
   },
   "zkn": {
     "idRE": "(\\d{14})",
@@ -82,6 +89,7 @@
   "editor": {
     "autoSave": "immediately",
     "autocompleteSuggestEmojis": true,
+    "snippetAutocompleteTriggerCharacter": ":",
     "autoCloseBrackets": true,
     "showLinkPreviews": true,
     "showWhitespace": false,
@@ -113,13 +121,7 @@
           "pt": "pt-PT",
           "ca": "ca-ES"
         },
-        "ignoredRules": [
-          {
-            "description": "Commas after conjunctive/linking adverbs in front of a new sentence.",
-            "id": "SENT_START_CONJUNCTIVE_LINKING_ADVERB_COMMA",
-            "category": "Punctuation"
-          }
-        ],
+        "ignoredRules": [],
         "provider": "official",
         "customServer": "",
         "username": "",

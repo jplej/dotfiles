@@ -5,7 +5,7 @@ configuration {
     sorting-method: "fzf";
     sort: true;
     case-sensitive: false;
-    terminal: "kitty";
+    terminal: "ghostty";
     drun-display-format: "{name} - {generic}";
     drun-match-fields: "name,exec,categories";
     scroll-method: 1;
@@ -16,4 +16,4 @@ configuration {
 
 //@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
 //@theme "/usr/share/rofi/themes/solarized_alternate.rasi"
-@theme "~/.config/rofi/nord.rasi"
+@theme "~/.config/rofi/nord-deskbar.rasi"
